@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="./layout.css" rel="stylesheet">
+    <link href="./typography.css" rel="stylesheet">
+    <style>
+      :root {
+        --pagenums-display: <% if (meta.pagenums) { %>inherit<% } %><% if (!meta.pagenums) { %>none<% } %>;
+        --font-size: <% if (meta.largeFont) { %>13pt<% } %><% if (!meta.largeFont) { %>inherit<% } %>;
+      }
+    </style>
+  </head>
+  <body>
+    <% if (meta.foldingMarks) { %>
+      <div id="faltmarke-1"></div>
+      <div id="faltmarke-2"></div>
+    <% } %>
+    <% if (meta.punchingMark) { %>
+      <div id="lochmarke"></div>
+    <% } %>
+
+    <div id="header-box">
+      <span id="header-box-content"><%= header %></span>
+    </div>
+
+    <div id="address-box">
+      <div id="sender-box">
+        <%= sender _%>
+      </div>
+      <%= address %>
+    </div>
+
+    <p id="date"></p>
+
+    <p id="subject"><%= subject %></p>
+
+    <div id="text" <% if (meta.justifyBody) { %>class="justify"<% } %>>
+      <%- body %>
+
+      <%= salutation[0] %>
+
+
+
+      <%= salutation[1] %>
+    </div>
+
+    <script>
+      const customDate =
+        <% if (meta.date) { %>"<%= meta.date %>"<% } %>
+        <% if (!meta.date) { %>undefined<% } %>;
+      document.getElementById('date').innerText =
+        customDate || new Date().toLocaleDateString('de-DE', {year: 'numeric', month: 'long', day: 'numeric' });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+/* Cinzel font from google fonts */
+/* KP fonts from https://ctan.org/pkg/kpfonts-otf -- sweet music! */
+
+@font-face {
+  font-family: Cinzel;
+  src: url("fonts/Cinzel/Cinzel-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: kp;
+  font-weight: 300; /* light */
+  font-style: normal;
+  src: url("fonts/Kp-fonts/KpRoman-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: kp;
+  font-weight: 300; /* light */
+  font-style: italic;
+  src: url("fonts/Kp-fonts/KpRoman-LightItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: kp;
+  font-weight: 400; /* normal */
+  font-style: normal;
+  src: url("fonts/Kp-fonts/KpRoman-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: kp;
+  font-weight: 400; /* normal */
+  font-style: italic;
+  src: url("fonts/Kp-fonts/KpRoman-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: kp;
+  font-weight: 600; /* semi-bold */
+  font-style: normal;
+  src: url("fonts/Kp-fonts/KpRoman-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: kp;
+  font-weight: 600; /* semi-bold */
+  font-style: italic;
+  src: url("fonts/Kp-fonts/KpRoman-SemiboldItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: kp;
+  font-weight: 700; /* bold */
+  font-style: normal;
+  src: url("fonts/Kp-fonts/KpRoman-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: kp;
+  font-weight: 700; /* bold */
+  font-style: italic;
+  src: url("fonts/Kp-fonts/KpRoman-BoldItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: kp-sans;
+  font-weight: 400; /* normal */
+  font-style: normal;
+  src: url("fonts/Kp-fonts/KpSans-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: kp-sans;
+  font-weight: 700; /* bold */
+  font-style: normal;
+  src: url("fonts/Kp-fonts/KpSans-Bold.otf") format("opentype");
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  font-family: 'kp', serif;
+  font-feature-settings: "onum", "liga"; /* "hist", "hlig", "dlig", "salt" */
+}
+
+.justify {
+  text-align: justify;
+}

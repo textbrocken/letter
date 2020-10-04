@@ -1,0 +1,79 @@
+@page {
+  size: A4 portrait;
+  margin: 20mm;
+  margin-left: 25mm;
+  @bottom-center {
+    content: "Seite " counter(page) " von " counter(pages);
+    font-weight: 300;
+    color: #333;
+    font-size: smaller;
+    font-family: kp-sans;
+    display: var(--pagenums-display)
+  }
+}
+
+#faltmarke-1 {
+  position: fixed;
+  top: 35%;
+  left: 0.25em;
+  height: 1pt;
+  width: 1.8em;
+  background-color: #bbb;
+}
+
+#lochmarke {
+  position: fixed;
+  top: 50%;
+  left: 0.25em;
+  height: 1pt;
+  width: 1.2em;
+  background-color: #ccc;
+}
+
+#faltmarke-2 {
+  position: fixed;
+  bottom: 31.6666666%;
+  left: 0.25em;
+  height: 1pt;
+  width: 0.6em;
+  background-color: #ddd;
+}
+
+#header-box {
+  height: 25mm;
+}
+
+#header-box-content {
+  /* font-family: kp-sans; */
+  font-family: 'Cinzel', serif;
+  font-size: larger;
+  font-weight: 600;
+  white-space: pre-line;
+}
+
+#sender-box {
+  max-height: 17.7mm;
+  width: 85mm;
+  padding-bottom: 1mm;
+  border-bottom: 1pt solid #666;
+  margin-bottom: 1mm;
+  font-size: 75%;
+}
+
+#address-box {
+  height: 45mm;
+  width: 85mm;
+  white-space: pre-line;
+}
+
+#date {
+  text-align: right;
+}
+
+#subject {
+  font-weight: bold;
+}
+
+#text {
+  white-space: pre-line;
+}

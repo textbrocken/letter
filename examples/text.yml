@@ -1,0 +1,36 @@
+
+meta:
+  pagenums: false
+  punchingMark: false
+  foldingMarks: true
+  justifyBody: true
+  hyphenate: true
+  fixTypesetting: true
+  largeFont: false
+
+header: |-
+  Max Mustermann
+
+sender: >
+  Max Mustermann ·
+  Musterstr. 123 ·
+  12345 Musterstadt
+
+address: |-
+  Maximilia Musterfrau
+  An der Brücke 18b
+  23456 Schnackelhausen
+
+subject: >
+  Lorem ipsum dolor sit amet aye!
+
+body: |-
+  Guten Morgen, Frau 'Musterfrau',
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non erat sit amet ipsum gravida "congue". Suspendisse egestas libero aliquam libero feugiat, id elementum mi rutrum. Ut nec pellentesque mauris. Vivamus eros sapien, semper vitae consectetur vel, gravida tincidunt orci.
+
+  Proin quis arcu bibendum, pulvinar urna quis, hendrerit - massa. Nunc -- sit amet lacinia mi. Fusce fermentum, ex ac maximus congue, libero risus lobortis nisl, eu posuere nisi nibh id nibh.
+
+salutation:
+  - Mit freundlichen Grüßen
+  - Max Mustermann

@@ -1,0 +1,26 @@
+{
+  "name": "@textbrocken/letter",
+  "version": "0.0.1",
+  "description": "Render YAML files to PDF files, creating nice letters",
+  "bin": "cli.js",
+  "main": "index.js",
+  "dependencies": {
+    "@rauschma/stringio": "^1.4.0",
+    "ejs": "^3.1.5",
+    "figlet": "^1.5.0",
+    "get-stdin": "^8.0.0",
+    "hyphenation.de": "^0.2.1",
+    "hypher": "^0.2.5",
+    "js-yaml": "^3.14.0",
+    "meow": "^7.1.1",
+    "open": "^7.3.0",
+    "pagedjs-cli": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "pagedjs-cli": "pagedjs-cli",
+    "open": "open"
+  },
+  "author": "mbaer3000",
+  "license": "MIT"
+}
