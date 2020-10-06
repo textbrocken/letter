@@ -16,7 +16,7 @@ const open = require('open');
       -o, --output      Output PDF file (defaults to input yaml file name with .pdf extension)
       -v, --verbose     Log verbosely (default false)
       -q, --quiet       Log nothing (default false)
-      -a, --auto-open   Open in PDF file in PDF viewer (default true)
+      -a, --auto-open   Open PDF file in PDF viewer (default true)
 
     Examples
       $ npx @textbrocken/letter -i my-letter.yml -o my-letter.pdf

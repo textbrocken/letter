@@ -31,7 +31,7 @@ npx @textbrocken/letter -i brief.yml
 | foldingMarks | Boolean | Faltmarken | false |
 | justifyBody | Boolean | Blocksatz | false |
 | hyphenate | Boolean | Silbentrennung | true |
-| fixTypesetting | Boolean | Typographisch Behandlung von Bindestrichen, Anführungszeichen etc. | true |
+| fixTypesetting | Boolean | Typographische Behandlung von Bindestrichen, Anführungszeichen etc. | true |
 | largeFont | Boolean | große Schrift | false |
 
 ## CLI-Optionen
@@ -42,4 +42,4 @@ npx @textbrocken/letter -i brief.yml
 | -o, --output | Output PDF file (defaults to input yaml file name with .pdf extension) |
 | -v, --verbose | Log verbosely (default false) |
 | -q, --quiet | Log nothing (default false) |
-| -a, --auto-open | Open in PDF file in PDF viewer (default true) |
+| -a, --auto-open | Open PDF file in PDF viewer (default true) |
