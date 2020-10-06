@@ -1,6 +1,6 @@
 {
   "name": "@textbrocken/letter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Render YAML files to PDF files, creating nice letters",
   "keywords": [
     "yaml",
