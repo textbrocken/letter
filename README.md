@@ -26,13 +26,13 @@ npx @textbrocken/letter -i brief.yml
 | YAML-Feld     | Typ | Beschreibung | Default |
 | ------------- | --- | ------------ | ------- |
 | meta.date | String | Datum | Heute |
-| pagenums | Boolean | Seitennummern | false |
-| punchingMark | Boolean | Lochmarke  | false |
-| foldingMarks | Boolean | Faltmarken | false |
-| justifyBody | Boolean | Blocksatz | false |
-| hyphenate | Boolean | Silbentrennung | true |
-| fixTypesetting | Boolean | Typographische Behandlung von Bindestrichen, Anführungszeichen etc. | true |
-| largeFont | Boolean | große Schrift | false |
+| meta.pagenums | Boolean | Seitennummern | false |
+| meta.punchingMark | Boolean | Lochmarke  | false |
+| meta.foldingMarks | Boolean | Faltmarken | false |
+| meta.justifyBody | Boolean | Blocksatz | false |
+| meta.hyphenate | Boolean | Silbentrennung | true |
+| meta.fixTypesetting | Boolean | Typographische Behandlung von Bindestrichen, Anführungszeichen etc. | true |
+| meta.largeFont | Boolean | große Schrift | false |
 
 ## CLI-Optionen
 
