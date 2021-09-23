@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const figlet = require('figlet');
 const meow = require('meow');
 const getStdin = require('get-stdin');
