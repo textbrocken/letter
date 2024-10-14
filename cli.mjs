@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 
-const figlet = require('figlet');
-const meow = require('meow');
-const getStdin = require('get-stdin');
-const yaml = require('js-yaml');
-const fs = require('fs');
-const path = require('path');
-const open = require('open');
+import figlet from 'figlet';
+import meow from 'meow';
+import getStdin from 'get-stdin';
+import yaml from 'js-yaml';
+import fs from 'fs';
+import path from 'path';
+import open from 'open';
+
+import prepare from './prepare.js';
+import render from './render.js';
 
 (async function main() {
   const cli = meow(`
@@ -23,32 +26,33 @@ const open = require('open');
     Examples
       $ npx @textbrocken/letter -i my-letter.yml -o my-letter.pdf
   `, {
+    importMeta: import.meta,
     flags: {
       input: {
           type: 'string',
-          alias: 'i'
+          shortFlag: 'i'
       },
       output: {
         type: 'string',
-        alias: 'o'
+        shortFlag: 'o'
       },
       verbose: {
-        alias: 'v',
+        shortFlag: 'v',
         type: 'boolean',
         default: false
       },
       quiet: {
-        alias: 'q',
+        shortFlag: 'q',
         type: 'boolean',
         default: false
       },
-      'auto-open': {
-        alias: 'a',
+      'autoOpen': {
+        shortFlag: 'a',
         type: 'boolean',
         default: true
       },
       help: {
-        alias: 'h',
+        shortFlag: 'h',
         type: 'boolean'
       }
   }
@@ -64,7 +68,7 @@ const open = require('open');
   global.logVerbose && console.log('called with flags:', cli.flags);
   global.logVerbose && console.log('stdin:', stdin);
 
-  const inputYaml = yaml.safeLoad(
+  const inputYaml = yaml.load(
     stdin ||
     (cli.flags.input && fs.readFileSync(cli.flags.input, 'utf8')) ||
     (console.log('!!! no input YAML found, call with --help to learn more'), '')
@@ -81,8 +85,8 @@ const open = require('open');
 
   global.logVerbose && console.log('will use outFile ' + outFile);
 
-  const preparedHtml = require('./prepare')(inputYaml);
-  await require('./render')(preparedHtml, outFile);
+  const preparedHtml = prepare(inputYaml);
+  await render(preparedHtml, outFile);
   cli.flags.autoOpen && await open(outFile, {wait: false});
   global.logNothing || console.log(figlet.textSync('done', { font: 'cybermedium' }));
 })();

@@ -12,19 +12,19 @@
     "type": "git"
   },
   "homepage": "https://github.com/textbrocken/letter",
-  "bin": "cli.js",
+  "bin": "cli.mjs",
   "main": "index.js",
   "dependencies": {
-    "@rauschma/stringio": "^1.4.0",
-    "ejs": "^3.1.5",
-    "figlet": "^1.5.0",
-    "get-stdin": "^8.0.0",
+    "@rauschma/stringio": "1.x",
+    "ejs": "3.x",
+    "figlet": "1.x",
+    "get-stdin": "8.x",
     "hyphenation.de": "^0.2.1",
     "hypher": "^0.2.5",
-    "js-yaml": "^3.14.0",
-    "meow": "^7.1.1",
-    "open": "^7.3.0",
-    "pagedjs-cli": "^0.1.1"
+    "js-yaml": "4.x",
+    "meow": "13.x",
+    "open": "10.x",
+    "pagedjs-cli": "0.x"
   },
   "devDependencies": {},
   "scripts": {
